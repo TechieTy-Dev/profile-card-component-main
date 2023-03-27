@@ -1,0 +1,137 @@
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cyan: hsl(185, 75%, 39%);
+    --blue: hsl(229, 23%, 23%);
+    --blue-gray:  hsl(227, 10%, 46%);
+    --gray: hsl(0, 0%, 59%);
+}
+
+body{
+    font-size: 18px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+    background-color: var(--cyan);
+    min-height: 100vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+justify-content: center;
+position: relative;
+z-index: 0;
+}
+/* TOP LEFT BG CIRCLE */
+.top-circle{
+    position: absolute;
+    top: -500px;
+    left: -800px;
+    z-index: 0;
+}
+/* BOTTOM RIGHT BG CIRCLE */
+.btm-circle{
+    position: absolute;
+    bottom: -600px;
+    right: -700px;
+    z-index: 0;
+}
+/* CARD CONTAINER */
+.card{
+    width: 80%;
+    height: auto;
+    border-radius: 18px;
+    background: white;
+    z-index: 10;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.4);
+}
+.pattern{
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+/* CARD BODY */
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar{
+    border-radius: 100px;
+    width: 30%;
+    border: 5px solid white;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+}
+
+.name{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.age{
+    color: var(--blue-gray);
+    font-weight: 400;
+    margin-left: .5rem;
+}
+.city{
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+hr{
+    border-bottom: none;
+    border-left: none;
+    width: 100%;
+    opacity: 0.3;
+    border-right: none;
+    border-top: 1px solid var(--gray);
+    margin-bottom: 1rem;
+}
+/* STATS CONTAINER */
+.stats-container{
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    padding-bottom: 1rem;
+}
+.stat-group{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.stat{
+    font-weight: 700;
+}
+.stat-title{
+    color: var(--blue-gray);
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-top:.25rem;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 767px) {
+    .card{
+        width: 30%;
+    }
+    .top-circle{
+        top: -500px;
+        left: -300px;
+    }
+    .btm-circle{
+        right: -200px;
+        bottom: -650px;
+    }
+}
